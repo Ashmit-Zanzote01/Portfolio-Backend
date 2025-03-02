@@ -13,10 +13,12 @@ import com.example.demo.service.EmailService;
 
 @RestController
 @RequestMapping("/api/contact")
-@CrossOrigin(origins = {
-	    "https://portfolio-frontend-wa1y.onrender.com", // My new Portfolio frontend URL
-	    "http://localhost:3000"                    // Keep for local testing
-	})
+// @CrossOrigin(origins = {
+// 	    "https://portfolio-frontend-wa1y.onrender.com", // My new Portfolio frontend URL
+// 	    "http://localhost:3000"                    // Keep for local testing
+// 	})
+
+@CrossOrigin(origins = "*")
 public class ContactFormController {
 
     @Autowired
