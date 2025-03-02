@@ -5,7 +5,7 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 # Use OpenJDK 21 for runtime
-FROM openjdk:21-jdk  # ✅ Corrected to Java 21
+FROM eclipse-temurin:21-jdk
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
